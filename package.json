@@ -1,0 +1,19 @@
+{
+  "name": "fullstack",
+  "version": "1.0.0",
+  "description": "fullstack angularjs app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nickdaniele/fullstack.git"
+  },
+  "author": "nick_d",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nickdaniele/fullstack/issues"
+  },
+  "homepage": "https://github.com/nickdaniele/fullstack#readme"
+}
