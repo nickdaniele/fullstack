@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/nickdaniele/fullstack/issues"
   },
-  "homepage": "https://github.com/nickdaniele/fullstack#readme"
+  "homepage": "https://github.com/nickdaniele/fullstack#readme",
+  "dependencies": {
+    "express": "^4.14.0",
+    "mongoose": "^4.6.4"
+  }
 }
