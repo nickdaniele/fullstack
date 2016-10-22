@@ -1,1 +1,5 @@
-<div>Hello {{ $ctrl.message }}</div>
+<div>
+Current Input: {{ $ctrl.input }} 
+Input: <input ng-model='$ctrl.input' />
+<button ng-click="$ctrl.sending($ctrl.input)">Send Data</button>
+</div>
