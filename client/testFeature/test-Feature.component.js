@@ -4,19 +4,22 @@ angular.module('testFeature')
   controller: ['$http',function testFeatureController($http) {
     this.input = 'default';
     this.sending = function(currentInput) {
-      console.log('currentInput : ', currentInput);
       $http({
+        url: 'http://localhost:3000/test',
+        dataType: 'json',
         method: 'POST',
-        url: '/test',
-        data: JSON.stringify(currentInput)
+        data: { test: JSON.stringify(currentInput) },
+        headers: {
+          "Content-Type": "application/json"
+        }
       }).then(function successCallback(response) {
           // this callback will be called asynchronously
           // when the response is available
-          console.log('POST request was a success!');
+          console.log(response);
       }, function errorCallback(response) {
           // called asynchronously if an error occurs
           // or server returns response with an error status.
-          console.log('POST request failed!');
+          console.log('Angular: POST request failed');
       });
     }
   }]
