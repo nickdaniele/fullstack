@@ -1,5 +1,6 @@
 var express = require('express');
-var bodyParser = require('body-parser'); 
+var bodyParser = require('body-parser');
+var mongoTestModel = require('../database/database.js'); 
 
 // Create instance of express
 var app = express();
@@ -15,8 +16,16 @@ app.get('/', function (req, res) {
   res.sendFile('../client/index.html');
 });
 
-// Post 
+// Post to main route
 app.post('/test', function(req, res) {
+  console.log('Data in express POST : ', req.body.test);
+
+  var newEntry = new mongoTestModel({ stuff: req.body.test });
+
+  newEntry.save(function(err, newEntry) {
+    if (err) { return console.error(err) };
+  });
+
   res.send('Express: post request worked!!!');
 });
 
