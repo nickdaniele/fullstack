@@ -1,1 +1,1 @@
-var fullStackApp = angular.module('fullStackApp', ['testFeature']);
+var fullStackApp = angular.module('fullStackApp', ['testFeature', 'testDisplay']);

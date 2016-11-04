@@ -1,7 +1,7 @@
 angular.module('testFeature')
 .component('testFeature', {
   templateUrl: '../testFeature/test-Feature.template.html',
-  controller: ['$http',function testFeatureController($http) {
+  controller: ['$http', function testFeatureController($http) {
     this.input = 'default';
     this.sending = function(currentInput) {
       $http({
