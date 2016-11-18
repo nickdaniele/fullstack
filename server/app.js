@@ -29,6 +29,14 @@ app.post('/test', function(req, res) {
   res.send('Express: post request worked!!!');
 });
 
+app.get('/test', function(req, res) {
+	mongoTestModel.find(function(err, tests) {
+		if (err) { console.log(err); }
+		console.log(tests);
+	});
+});
+
+
 ////////////////////////////////////////////////////////////////////////////////
 
 // Set up port to listen on
