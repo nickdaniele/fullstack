@@ -25,14 +25,12 @@ app.post('/test', function(req, res) {
   newEntry.save(function(err, newEntry) {
     if (err) { return console.error(err) };
   });
-
-  res.send('Express: post request worked!!!');
 });
 
 app.get('/test', function(req, res) {
 	mongoTestModel.find(function(err, tests) {
 		if (err) { console.log(err); }
-		console.log(tests);
+    res.send(tests);
 	});
 });
 
